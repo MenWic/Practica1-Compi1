@@ -165,8 +165,8 @@ numero::=operacion:num {:RESULT=num;:}
 
 operacion::= operacion:num SUMA x:num2 {:RESULT=(double)num + (double)num2;:}
 	| operacion:num RESTA x:num2 {:RESULT=(double)num-(double)num2;:}
-	| operacion:num MULTIPLICACION x:num2 {:RESULT=(double)num * (double)num2;:}
-	| operacion:num DIVISION x:num2 {:RESULT=(double)num / (double)num2;:}
+	| operacion:num MULTIPLICACION x:num2 {: RESULT=(double)num * (double)num2;:}
+	| operacion:num DIVISION x:num2 {: RESULT=(double)num / (double)num2;:}
 	| x:num {:RESULT=num;:}
 	;
 
